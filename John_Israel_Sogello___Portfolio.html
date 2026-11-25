@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>John Israel Sogello — Junior IT Technician Portfolio</title>
+<meta name="description" content="Portfolio of John Israel Sogello, Junior IT Technician from Roxas City: projects, skills, documents and contact details.">
+<script>try{var t=localStorage.getItem('theme');if(t?t==='dark':matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.classList.add('dark')}catch(e){}</script>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config={darkMode:'class',theme:{extend:{
+colors:{bg:'var(--bg)',surface:'var(--surface)',tx:'var(--text)',mute:'var(--muted)',brand:'var(--blue)',bd:'var(--border)',glow:'var(--glow)'},
+fontFamily:{mono:['ui-monospace','SF Mono','Menlo','Consolas','monospace']},
+keyframes:{loop:{to:{transform:'translateX(calc(-50% - 8px))'}},blink:{'50%':{opacity:0}},fade:{from:{opacity:0,transform:'translateY(10px)'},to:{opacity:1,transform:'none'}}},
+animation:{loop:'loop 40s linear infinite',blink:'blink 1s steps(2) infinite',fade:'fade .5s ease'}}}}
+</script>
+<style>
+:root{--bg:#fff;--surface:#f3f6fc;--text:#0a0f1c;--muted:#52607a;--blue:#1b64f2;--border:#d9e1f0;--glow:rgba(27,100,242,.25);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root.dark{--bg:#05070d;--surface:#0c111c;--text:#eef2fa;--muted:#8a96ad;--blue:#3b82ff;--border:#1b2538;--glow:rgba(59,130,255,.35);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:48px 48px;background-attachment:fixed}
+body::after{content:"";position:fixed;inset:0;background:radial-gradient(ellipse at 50% 0,transparent 0,var(--bg) 75%);z-index:-1;pointer-events:none}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.car{mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+</style>
+<style>
+.pc{position:relative}
+.pc:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+.pc-vp{overflow:hidden;touch-action:pan-y;cursor:grab}
+.pc-vp.drag{cursor:grabbing}
+.pc-tr{display:flex;transition:transform .6s cubic-bezier(.22,.8,.3,1);will-change:transform}
+.pc-tr.na{transition:none}
+.pc-sl{flex:0 0 100%;min-width:0}
+.pc-b{position:absolute;top:50%;margin-top:-18px;width:36px;height:36px;border-radius:9999px;display:grid;place-items:center;font-size:1.3rem;line-height:1;color:var(--text);cursor:pointer;opacity:0;transition:opacity .2s,border-color .2s,box-shadow .2s;background:color-mix(in srgb,var(--surface) 80%,transparent);border:1px solid var(--border);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.pc:hover .pc-b,.pc:focus-within .pc-b{opacity:1}
+@media (hover:none){.pc-b{opacity:1}}
+.pc-b:hover{border-color:var(--blue);box-shadow:0 0 16px var(--glow)}
+.pc-b:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.pc-p{left:10px}.pc-n{right:10px}
+.pc-d{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:center;gap:8px}
+.pc-d button{width:8px;height:8px;padding:0;border-radius:9999px;cursor:pointer;background:color-mix(in srgb,var(--text) 30%,transparent);border:0;transition:width .25s,background .25s,box-shadow .25s}
+.pc-d button[aria-current="true"]{width:22px;background:var(--blue);box-shadow:0 0 10px var(--blue)}
+.pc-vid{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+.doc-tab[aria-selected="true"]{color:var(--blue);background:var(--glow);border-color:var(--blue)}
+.pre{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:12px 14px;font-family:ui-monospace,SF Mono,Menlo,Consolas,monospace;font-size:.8rem;overflow-x:auto;margin:8px 0;white-space:pre}
+@media (prefers-reduced-motion:reduce){.pc-tr{transition:none}}
+</style>
+<style type="text/tailwindcss">
+@layer components{
+.card{@apply bg-surface border border-bd rounded-2xl p-6}
+.glass{background:color-mix(in srgb,var(--surface) 55%,transparent);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border:1px solid color-mix(in srgb,var(--text) 14%,transparent);border-radius:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 8px 32px rgba(0,0,0,.18)}
+.btn{@apply inline-block bg-brand text-white px-6 py-3 rounded-xl font-semibold text-[.95rem] shadow-[0_0_24px_var(--glow)] transition hover:-translate-y-0.5 cursor-pointer}
+.btn-o{@apply inline-block px-6 py-3 rounded-xl font-semibold text-[.95rem] text-tx border border-bd transition hover:-translate-y-0.5 hover:border-brand}
+.chip{@apply border border-bd bg-bg text-brand text-xs px-3 py-0.5 rounded-full font-mono}
+.ct{@apply font-mono text-brand font-semibold mt-0 mb-3}
+.eyebrow{@apply block font-mono text-brand text-[.8rem] font-normal}
+.sub{@apply text-mute mb-6}
+.nav-l{@apply text-mute px-3 py-1.5 rounded-lg text-[.92rem] whitespace-nowrap hover:text-tx}
+.view{@apply hidden animate-fade}
+.sk{@apply w-[260px] shrink-0 bg-surface border border-bd rounded-2xl p-6 transition hover:border-brand hover:shadow-[0_0_28px_var(--glow)] hover:-translate-y-1}
+.ico{@apply w-16 h-16 rounded-2xl bg-glow grid place-items-center mb-3.5}
+.stat{@apply bg-surface border border-bd rounded-2xl p-4 text-center}
+.tl{@apply border-l-2 border-bd ml-1.5 pl-5}
+.it{@apply relative mb-6 before:content-[''] before:absolute before:-left-[29px] before:top-[7px] before:w-3 before:h-3 before:rounded-full before:bg-brand before:shadow-[0_0_12px_var(--blue)]}
+.it h4{@apply m-0 font-semibold}
+.when{@apply font-mono text-brand text-[.8rem]}
+.it p,.it li{@apply text-mute text-sm my-1}
+.proj{@apply bg-surface border border-bd rounded-2xl overflow-hidden transition hover:border-brand hover:shadow-[0_0_30px_var(--glow)] hover:-translate-y-1}
+.ci{@apply flex gap-3.5 items-center mb-4 text-tx break-all}
+.ci i{@apply not-italic w-[42px] h-[42px] rounded-xl bg-glow grid place-items-center shrink-0}
+.ci small{@apply block text-mute}
+.inp{@apply w-full bg-bg text-tx border border-bd rounded-xl px-3.5 py-3 mb-3 focus:outline-none focus:border-brand focus:ring-2 focus:ring-glow}
+}
+</style>
+</head>
+<body class="m-0 bg-bg text-tx font-sans leading-relaxed">
+<header class="sticky top-[env(safe-area-inset-top,0px)] z-20 bg-bg/90 backdrop-blur-md border-b border-bd">
+<nav class="max-w-[1100px] mx-auto flex items-center gap-2 px-3 md:px-5 py-3">
+<a class="hidden md:block mr-auto font-bold font-mono whitespace-nowrap" href="#home">&lt;<span class="text-brand">JIS</span>/&gt;</a>
+<div class="flex gap-1 overflow-x-auto mr-auto md:mr-0">
+<a class="nav-l" data-v="home" href="#home">Home</a><a class="nav-l" data-v="portfolio" href="#portfolio">Portfolio</a><a class="nav-l" data-v="contacts" href="#contacts">Contacts</a><a class="nav-l" data-v="projects" href="#projects">My Projects</a><a class="nav-l" data-v="certificates" href="#certificates">Certificates</a><a class="nav-l" data-v="documents" href="#documents">Documents</a>
+</div>
+<button id="theme" aria-label="Toggle light and dark mode" class="bg-surface border border-bd text-tx w-[38px] h-[38px] rounded-full cursor-pointer shrink-0 hover:border-brand">◐</button>
+</nav></header>
+
+<main class="max-w-[1100px] mx-auto px-5 pb-16">
+<section class="view" id="home">
+<div class="grid md:grid-cols-[1.2fr_.8fr] gap-10 items-center min-h-[68vh] py-12 text-center md:text-left">
+<div>
+<span class="inline-block border border-bd bg-surface text-brand px-3 py-1 rounded-full text-[.8rem] font-mono mb-4">● Open to work</span>
+<h1 class="text-[clamp(2.2rem,6vw,3.8rem)] leading-[1.1] tracking-tight font-bold mb-3">Hi, I’m <em class="not-italic text-brand">John Israel</em> Sogello</h1>
+<p class="font-mono text-lg text-brand m-0">Junior IT Technician</p>
+<p class="text-mute max-w-[520px] mt-3.5 mb-6 mx-auto md:mx-0">I troubleshoot hardware and networks and build tested Django web apps, so your team gets a quick learner who fixes problems properly.</p>
+<div class="flex flex-wrap gap-3 justify-center md:justify-start">
+<a class="btn" href="assets/documents/Sogello_ATS_Resume.pdf" download="Sogello_ATS_Resume.pdf" data-dl>⬇ Download Résumé (PDF)</a>
+<a class="btn-o" href="https://www.linkedin.com/in/john-israel-sogello-8856b6338" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn-o" href="https://github.com/John-Israel" target="_blank" rel="noopener">GitHub</a>
+</div>
+</div>
+<div class="relative w-3/5 md:w-[min(340px,80%)] aspect-square mx-auto p-1.5 rounded-full order-first md:order-none bg-[conic-gradient(var(--blue),transparent_40%,var(--blue))] shadow-[0_0_60px_var(--glow)]">
+<div class="relative block w-full h-full rounded-full overflow-hidden bg-surface">
+<svg id="ph" class="w-full h-full block" viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" fill="var(--surface)"/><circle cx="100" cy="78" r="36" fill="var(--blue)" opacity=".85"/><path d="M30 200c6-48 40-72 70-72s64 24 70 72z" fill="var(--blue)" opacity=".6"/></svg>
+<!-- YOUR PHOTO: save it as assets/images/profile/profile.jpg (or change the path below) -->
+<img src="assets/images/profile/profile.jpg" alt="Portrait of John Israel Sogello" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+</div></div>
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-2.5 mb-12">
+<div class="stat"><b class="block text-2xl text-brand">NC II</b><span class="text-mute text-[.8rem]">TESDA Certified</span></div>
+<div class="stat"><b class="block text-2xl text-brand">Django</b><span class="text-mute text-[.8rem]">Backend Dev</span></div>
+<div class="stat"><b class="block text-2xl text-brand">PostgreSQL</b><span class="text-mute text-[.8rem]">Databases</span></div>
+<div class="stat"><b class="block text-2xl text-brand">BSIT</b><span class="text-mute text-[.8rem]">Filamer Christian Univ.</span></div>
+</div>
+
+<h2 class="text-[1.7rem] font-bold mb-1"><small class="eyebrow">// skills</small>What I can do</h2>
+<p class="sub">Hover to pause the carousel.</p>
+<div class="car overflow-hidden"><div class="flex gap-4 w-max animate-loop motion-reduce:animate-none hover:[animation-play-state:paused]" id="track"></div></div>
+<div class="text-center mt-8"><a class="btn" href="#portfolio">Go to my Portfolio →</a></div>
+</section>
+
+<section class="view pt-10" id="portfolio">
+<h2 class="text-[1.7rem] font-bold mb-1"><small class="eyebrow">// portfolio</small>About me</h2>
+<p class="sub !mb-6">Junior IT Technician · Pres. Roxas, Capiz, Philippines</p>
+<div class="card mb-5"><p class="m-0">I’m seeking a Junior IT Technician position where I can apply my knowledge of computer systems, hardware and software troubleshooting, basic networking and technical support. I aim to contribute my teamwork, communication and problem-solving skills while gaining hands-on experience and continuously improving my technical abilities.</p></div>
+<div class="grid md:grid-cols-2 gap-5">
+<div class="card"><h3 class="ct">Education</h3>
+<div class="tl">
+<div class="it"><h4>TVL – Information and Communications Technology</h4><span class="when">Aug 2024 – Present</span><p>Feliciano Yusay Consing National High School</p></div>
+<div class="it"><h4>Bachelor of Science in Information Technology</h4><span class="when">Aug 2022 – May 2024</span><p>Filamer Christian University, Roxas City</p></div>
+</div>
+<h3 class="ct mt-4">Certification</h3>
+<div class="tl"><div class="it"><h4>CSS NC II</h4><span class="when">TESDA · 2024</span></div></div>
+</div>
+<div class="card"><h3 class="ct">Experience</h3>
+<div class="tl">
+<div class="it"><h4>Work Immersion / OJT Student — DepEd</h4><span class="when">Mar 2024 – Apr 2024</span>
+<ul class="pl-[18px] mt-1.5 list-disc"><li>Assembled and disassembled computer components</li><li>Identified and troubleshot basic hardware problems</li><li>Troubleshot common networking problems</li><li>Learned basic IP address configuration and network settings</li><li>Collaborated with classmates on hardware and networking activities</li></ul></div>
+<div class="it"><h4>Online Shoe Shopping Website</h4><span class="when">May 2025 – Jun 2025</span><p>Built a responsive web system with Django, Tailwind CSS and JavaScript, then tested and debugged it.</p></div>
+</div></div>
+</div>
+<div class="card mt-5"><h3 class="ct">Skills matrix</h3>
+<p class="text-mute text-sm mt-0 mb-4">Grouped by domain and rated by how I work with each one:
+<b class="text-tx">Proficient</b> – I can build or fix it on my own ·
+<b class="text-tx">Working</b> – productive, checking docs when needed ·
+<b class="text-tx">Familiar</b> – basic hands-on exposure.</p>
+<div class="grid md:grid-cols-2 gap-4" id="matrix"></div></div>
+<div class="text-center mt-8 flex flex-wrap gap-3 justify-center"><a class="btn" href="#projects">See my projects →</a><a class="btn-o" href="#contacts">Contact me</a></div>
+</section>
+
+<section class="view pt-10" id="projects">
+<h2 class="text-[1.7rem] font-bold mb-1"><small class="eyebrow">// my projects</small>Flagship case studies</h2>
+<p class="sub">Two academic projects, each broken down into the problem, architecture, my contribution and the testing outcome. The pictures change on their own; use the arrows or dots to go back.</p>
+<div class="grid gap-8" id="projs"></div>
+</section>
+
+<section class="view pt-10" id="certificates">
+<h2 class="text-[1.7rem] font-bold mb-1"><small class="eyebrow">// certificates</small>Certificates &amp; Achievements</h2>
+<p class="sub">Click any card to view it larger.</p>
+<h3 class="ct">Certificates</h3>
+<div id="grid-c" class="grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] gap-5 mb-10"></div>
+<h3 class="ct">Achievements</h3>
+<div id="grid-a" class="grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] gap-5"></div>
+</section>
+
+<section class="view pt-10" id="documents">
+<h2 class="text-[1.7rem] font-bold mb-1"><small class="eyebrow">// documents</small>Documentation samples</h2>
+<p class="sub">Technical writing from my course: my résumé, a cover letter and a developer guide / SOP.</p>
+<div class="flex flex-wrap gap-2 mb-5" role="tablist" aria-label="Document samples">
+<button class="doc-tab nav-l border border-bd cursor-pointer" role="tab" id="t-res" aria-controls="d-res" aria-selected="true" data-d="res">Résumé</button>
+<button class="doc-tab nav-l border border-bd cursor-pointer" role="tab" id="t-cov" aria-controls="d-cov" aria-selected="false" data-d="cov">Cover letter</button>
+<button class="doc-tab nav-l border border-bd cursor-pointer" role="tab" id="t-dev" aria-controls="d-dev" aria-selected="false" data-d="dev">Developer guide (SOP)</button>
+</div>
+
+<div id="d-res" role="tabpanel" aria-labelledby="t-res" class="card">
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4"><h3 class="ct !mb-0">Résumé</h3><a class="btn !px-4 !py-2 !text-sm" href="assets/documents/Sogello_ATS_Resume.pdf" download="Sogello_ATS_Resume.pdf" data-dl>⬇ Download PDF</a></div>
+<object data="assets/documents/Sogello_ATS_Resume.pdl#view=FitH" type="application/pdf" class="w-full h-[75vh] rounded-xl border border-bd bg-bg">
+<p class="p-6 text-mute">Your browser can’t show the PDF here. <a class="text-brand underline" href="assets/documents/Sogello_ATS_Resume.pdf" target="_blank" rel="noopener">Open the résumé in a new tab</a>.</p>
+</object></div>
+
+<div id="d-cov" role="tabpanel" aria-labelledby="t-cov" class="card hidden">
+<h3 class="ct">Cover letter</h3>
+<div class="max-w-[720px] space-y-3 text-[.95rem]">
+<p class="m-0 text-mute">John Israel Sogello · Pres. Roxas, Capiz · ezrealsogello49@gmail.com · 0991 538 9065</p>
+<p class="m-0">Dear Hiring Manager,</p>
+<p class="m-0">I am applying for the Junior IT Technician position at your company. I hold a Computer Systems Servicing NC II from TESDA, and during my work immersion at DepEd I assembled and disassembled computer components, troubleshot hardware and network problems, and configured IP addresses and network settings.</p>
+<p class="m-0">Beyond hardware, I build web systems. For my Online Shoe Shopping Website I used Django, Tailwind CSS and JavaScript, then tested and debugged it before submission. That project taught me to break a problem into small steps, test each fix and document what I did, which is the same habit I would bring to your help desk.</p>
+<p class="m-0">I communicate clearly, work well in a team and learn new tools quickly. I would welcome the chance to discuss how I can support your IT team. Thank you for your time and consideration.</p>
+<p class="m-0">Sincerely,<br><b>John Israel Sogello</b></p>
+</div></div>
+
+<div id="d-dev" role="tabpanel" aria-labelledby="t-dev" class="card hidden">
+<h3 class="ct">Developer guide / SOP</h3>
+<div class="max-w-[760px] text-[.95rem]">
+<h4 class="text-xl font-bold m-0">Running the Online Shoe Shopping Website locally</h4>
+<p class="font-mono text-brand text-xs mt-1 mb-4">Document type: Developer guide (SOP) · Version 1.0 · Author: John Israel Sogello</p>
+<p class="m-0 mb-1"><b>Purpose.</b> Set up and run the Django project on a Windows computer so a developer can test or continue it.</p>
+<p class="m-0 mb-1"><b>Prerequisites.</b> Python 3.10 or newer, Git, a PostgreSQL server, and a code editor such as VS Code.</p>
+<p class="m-0 mt-4 mb-1"><b>Procedure</b></p>
+<ol class="pl-5 list-decimal space-y-3 m-0">
+<li>Download the source code.<div class="pre">git clone &lt;repository-url&gt;
+cd online-shoe-shop</div></li>
+<li>Create and activate a virtual environment.<div class="pre">python -m venv venv
+venv\Scripts\activate</div></li>
+<li>Install the dependencies.<div class="pre">pip install -r requirements.txt</div></li>
+<li>Create an empty PostgreSQL database, then enter its name, user and password in the <code class="font-mono text-brand">DATABASES</code> section of <code class="font-mono text-brand">settings.py</code>.</li>
+<li>Create the tables and an admin account.<div class="pre">python manage.py migrate
+python manage.py createsuperuser</div></li>
+<li>Start the server.<div class="pre">python manage.py runserver</div></li>
+<li>Open <code class="font-mono text-brand">http://127.0.0.1:8000/</code> in a browser. The storefront should load; the admin panel is at <code class="font-mono text-brand">/admin/</code>.</li>
+</ol>
+<p class="m-0 mt-5 mb-2"><b>Troubleshooting</b></p>
+<div class="overflow-x-auto"><table class="w-full text-sm border-collapse">
+<thead><tr class="text-left text-brand font-mono"><th class="p-2 border-b border-bd">Symptom</th><th class="p-2 border-b border-bd">Likely cause</th><th class="p-2 border-b border-bd">Fix</th></tr></thead>
+<tbody class="text-mute">
+<tr><td class="p-2 border-b border-bd">ModuleNotFoundError: No module named 'django'</td><td class="p-2 border-b border-bd">Virtual environment not active</td><td class="p-2 border-b border-bd">Run step 2, then step 3 again</td></tr>
+<tr><td class="p-2 border-b border-bd">OperationalError: could not connect to server</td><td class="p-2 border-b border-bd">PostgreSQL stopped or wrong credentials</td><td class="p-2 border-b border-bd">Start the PostgreSQL service and recheck step 4</td></tr>
+<tr><td class="p-2">Port 8000 is already in use</td><td class="p-2">Another program uses the port</td><td class="p-2">Run <code class="font-mono">python manage.py runserver 8001</code></td></tr>
+</tbody></table></div>
+</div></div>
+</section>
+
+<section class="view pt-10" id="contacts">
+<h2 class="text-[1.7rem] font-bold mb-1"><small class="eyebrow">// contacts</small>Let’s work together</h2>
+<p class="sub">Open to junior IT technician roles and internships. Email me or send a message and I’ll get back to you.</p>
+<div class="grid md:grid-cols-[1fr_1.2fr] gap-5">
+<div class="card">
+<a class="ci" href="mailto:ezrealsogello49@gmail.com"><i>✉</i><span><small>Email</small>ezrealsogello49@gmail.com</span></a>
+<a class="ci" href="tel:09915389065"><i>☎</i><span><small>Phone</small>0991 538 9065</span></a>
+<a class="ci" href="https://www.linkedin.com/in/john-israel-sogello-8856b6338" target="_blank" rel="noopener"><i>in</i><span><small>LinkedIn</small>john-israel-sogello</span></a>
+<a class="ci" href="https://github.com/John-Israel" target="_blank" rel="noopener"><i>&lt;/&gt;</i><span><small>GitHub</small>github.com/John-Israel</span></a>
+<div class="ci"><i>⌖</i><span><small>Location</small>Pres. Roxas, Capiz, Philippines</span></div>
+<a class="btn mt-2" href="mailto:ezrealsogello49@gmail.com?subject=Job%20opportunity%20for%20John%20Israel%20Sogello">Email me about a role →</a>
+</div>
+<div class="card"><h3 class="ct">Send a message</h3>
+<input class="inp" id="fn" placeholder="Your name" aria-label="Your name" autocomplete="name"><input class="inp" id="fe" type="email" placeholder="Your email" aria-label="Your email" autocomplete="email"><textarea class="inp" id="fm" rows="5" placeholder="Your message" aria-label="Your message"></textarea>
+<button class="btn" id="send">Send message</button><p id="fs" role="status" class="text-sm mt-3 mb-0 text-mute min-h-[1.4em]"></p></div>
+</div>
+</section>
+</main>
+<div id="modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4 bg-black/45 backdrop-blur-md animate-fade" role="dialog" aria-modal="true">
+<div class="glass relative w-full max-w-4xl max-h-[90vh] overflow-auto grid md:grid-cols-[1.3fr_1fr] shadow-[0_0_60px_var(--glow)]">
+<button id="mx" aria-label="Close" class="glass absolute top-3 right-3 z-10 w-9 h-9 !rounded-full cursor-pointer text-tx hover:border-brand">✕</button>
+<div id="mimg" class="min-h-[240px] grid place-items-center bg-gradient-to-br from-glow to-transparent overflow-hidden"></div>
+<div class="p-6 flex flex-col justify-center gap-3"><span id="mt" class="font-mono text-brand text-xs uppercase tracking-widest"></span><h3 id="mn" class="m-0 text-2xl font-bold"></h3><span id="my" class="font-mono text-mute text-sm"></span><p id="md" class="m-0 text-mute"></p><label class="btn-o !px-4 !py-2 !text-sm cursor-pointer self-start">Change picture<input id="mf" type="file" accept="image/*" hidden></label></div>
+</div></div>
+
+<footer class="text-center text-mute text-[.8rem] font-mono p-6 border-t border-bd">© 2026 John Israel Sogello · Built with &lt;/&gt; and caffeine</footer>
+
+<script>
+const ic={
+db:'<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/>',
+net:'<circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v5M12 12l-6 5M12 12l6 5"/>',
+hw:'<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>',
+tool:'<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/>',
+bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.4 1 2.5h6c0-1.1.4-1.9 1-2.5A6 6 0 0 0 12 3z"/>',
+chat:'<path d="M21 12a8 8 0 0 1-11.7 7L3 20l1.2-5A8 8 0 1 1 21 12z"/>',
+code:'<path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/>',
+book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5"/>'};
+const skills=[
+["code","Backend Development","Django, PostgreSQL and SQL for building data-driven web apps."],
+["net","Basic Networking","File sharing and IP configuration for small networks."],
+["hw","Hardware & Software","Installing, assembling and disassembling computer components."],
+["tool","Technical Support","Troubleshooting hardware, software and network issues."],
+["bulb","Problem Solving","Breaking issues down and finding practical fixes."],
+["chat","Communication","Clear writing and verbal skills for teamwork."],
+["book","Willingness to Learn","Always improving and picking up new tools quickly."]];
+const svg=k=>'<svg class="w-8 h-8 stroke-brand fill-none stroke-[1.8]" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">'+ic[k]+'</svg>';
+const card=s=>'<div class="sk"><div class="ico">'+svg(s[0])+'</div><h3 class="m-0 mb-1.5 text-[1.05rem] font-semibold">'+s[1]+'</h3><p class="m-0 text-mute text-sm">'+s[2]+'</p></div>';
+const html=skills.map(card).join('');
+document.getElementById('track').innerHTML=html+html;
+/* Skills matrix: tiers are Proficient / Working / Familiar (no percentages). Edit names and tiers here. */
+const tiers={P:['Proficient','bg-brand text-white border-brand'],W:['Working','text-brand border-brand'],F:['Familiar','text-mute border-bd']};
+const matrix=[
+['Languages',[['Python','P'],['JavaScript','W'],['HTML & CSS','W'],['Java','P']]],
+['Frameworks & libraries',[['Django','P'],['Tailwind CSS','W'],['MediaPipe','F'],['OpenCV','F']]],
+['Databases',[['PostgreSQL','W'],['SQL','P']]],
+['Tools',[['Git & GitHub','F'],['VS Code','W'],['Windows network & IP configuration','W'],['Computer hardware assembly','P']]]];
+document.getElementById('matrix').innerHTML=matrix.map(g=>'<div class="border border-bd rounded-xl p-4 bg-bg"><h4 class="m-0 mb-2 font-mono text-brand text-sm">'+g[0]+'</h4><ul class="list-none p-0 m-0">'+g[1].map(k=>'<li class="flex items-center justify-between gap-3 py-1.5 text-sm"><span>'+k[0]+'</span><span class="shrink-0 border rounded-full px-2.5 py-0.5 text-[.72rem] font-mono '+tiers[k[1]][1]+'">'+tiers[k[1]][0]+'</span></li>').join('')+'</ul></div>').join('');
+/* PROJECT CASE STUDIES
+   shots = the pictures (or videos) that rotate every 2 seconds. Put the files in assets/images/projects/... or assets/videos/projects/...
+   A missing file just shows the dashed placeholder, so nothing breaks while you collect your screenshots.
+   links = repository and (optional) live demo. Replace YOUR-USERNAME with your real GitHub name. */
+const projects=[{
+n:'Online Shoe Shopping Website',
+sum:'A responsive e-commerce web system with a Django backend and an interactive storefront.',
+stack:['Python','Django','PostgreSQL','HTML','Tailwind CSS','JavaScript'],
+shots:['assets/images/projects/shoe-shop/shoe_img1.jpg','assets/images/projects/shoe-shop/shoe_img2.jpg','assets/images/projects/shoe-shop/shoe_img3.jpg'],
+problem:'Selling shoes through chat messages and social media posts makes browsing, ordering and stock tracking slow and easy to get wrong. The goal was a single website where customers can browse shoes and order, and the seller manages products in one place.',
+arch:['Django MVT structure: models hold products and orders, views hold the logic, templates render the pages.','Why Django: built-in authentication, admin panel and ORM let me spend time on features instead of plumbing.','Why PostgreSQL: products, customers and orders are related data that fit a reliable relational database.','Why Tailwind CSS + JavaScript: quick responsive layouts and a lightweight, interactive storefront with no heavy front-end framework.'],
+contrib:['Built the whole system together with my classmates, from planning to final submission.','Wrote the Django models, views and URL routes.','Designed the database tables and relationships.','Tested and debugged every feature before submission.'],
+results:[['Testing method','Manual functional testing of each feature'],['Devices checked','Phone, tablet and desktop widths'],['Defects','Found during testing and fixed before submission']], /* TODO: add your real numbers, e.g. "24 test cases, 24 passed" */
+links:{repo:'https://github.com/John-Israel/BMarketSite',demo:''}
+},{
+n:'IOT Hand Tracking and Face Scanner',
+sum:'Control the computer cursor with hand gestures using only a webcam.',
+stack:['Python','MediaPipe','OpenCV'],
+shots:['assets/videos/projects/demo_iot.mp4'],
+problem:'A physical mouse is not always practical: it needs a free hand on a surface, and it is awkward for demos or touch-free use. The goal was a virtual mouse that follows the user’s hand through a normal webcam, with no extra hardware.',
+arch:['Pipeline: OpenCV captures webcam frames, MediaPipe detects the 21 hand landmarks in each frame, and Python turns landmark positions into cursor movement and click gestures.','Why MediaPipe: a pre-trained hand-tracking model that runs in real time on an ordinary laptop, so no model training was needed.','Why OpenCV: simple, reliable webcam capture and on-screen drawing for feedback.','Why Python: fast to prototype and tune gestures.'],
+contrib:['Built the webcam capture and hand-detection loop.','Mapped fingertip landmark positions to cursor coordinates.','Defined the gestures that trigger clicks.','Tuned and tested the gestures until control felt reliable.'],
+results:[['Testing method','Live manual testing with a webcam'],['Checked','Cursor movement, click gestures, different lighting and hand distance'],['Outcome','Gestures adjusted until the cursor responded consistently']], 
+links:{repo:'https://github.com/John-Israel',demo:''}
+},
+{
+n:'Alarm Clock using Android Studio',
+sum:'A simple alarm clock that the alarm comes, it will open a video to keep you motivated.',
+stack:['Java','xml','gradle'],
+shots:['assets/images/projects/Alarm-clock/clock_img1.jpg', 'assets/images/projects/Alarm-clock/clock_img2.jpg'],
+problem:'When I wake up, I feel unmotivated to do something productive. So I made a simple Alarm clock to level up the alarms that I have and to keep me motivated by playing a video after the ringing ends',
+arch:['Android studio structure: XML designs the apps interface, Java handles the alarm functions and logic, and Gradle manages dependencies and builds the Android application.','Why Java: Used to implement the alarm features, time management, and alarm notifications.','Why XML: Used to create the apps layout, buttons, text fields, and overall user interface.','Why Gradle: Manages project dependencies, libraries, and the apps build process in Android Studio.'],
+contrib:['Built the whole app on my own from start to this current time','Added a after alarm feature where a video will play','Defined the structure and the design of the app','Tested and still updating to this day'],
+results:[['Testing method','Downloading the app and opening it'],['Checked','Add alarms, list of the Alarms, Music picker and Ringing'],['Outcome','Everythings working with a bug fixes still on the way']], 
+links:{repo:'https://github.com/John-Israel/Alarm_Clock',demo:''}
+}];
+const isVid=u=>/\.(mp4|webm)$/i.test(u);
+const li=a=>a.map(x=>'<li>'+x+'</li>').join('');
+const sec=(t,body)=>'<div><h4 class="font-mono text-brand text-[.8rem] font-semibold uppercase tracking-wider m-0 mb-2">'+t+'</h4>'+body+'</div>';
+document.getElementById('projs').innerHTML=projects.map(p=>{const n=p.shots.length;
+const slides=p.shots.map((src,k)=>'<div class="pc-sl" role="group" aria-roledescription="slide" aria-label="'+(k+1)+' of '+n+'"><div class="relative aspect-[16/9] md:aspect-[2/1] bg-gradient-to-br from-glow to-transparent grid place-items-center text-mute text-[.8rem] font-mono"><div class="border-2 border-dashed border-bd rounded-xl px-8 py-5">[ picture '+(k+1)+' of '+n+' ]</div>'+(isVid(src)?'<video class="pc-vid absolute inset-0" src="'+src+'" controls muted playsinline preload="metadata" onerror="this.remove()"></video>':'<img class="absolute inset-0 w-full h-full object-contain select-none" src="'+src+'" alt="'+p.n+' screenshot '+(k+1)+'" draggable="false" onerror="this.remove()">')+'</div></div>').join('');
+const res='<dl class="m-0 grid gap-2">'+p.results.map(r=>'<div class="text-sm"><dt class="inline font-semibold text-tx">'+r[0]+': </dt><dd class="inline m-0 text-mute">'+r[1]+'</dd></div>').join('')+'</dl>';
+const ul=a=>'<ul class="m-0 pl-5 list-disc text-mute text-sm space-y-1.5">'+li(a)+'</ul>';
+return '<article class="proj hover:!translate-y-0"><div class="pc border-b border-bd" data-pc role="group" aria-roledescription="carousel" aria-label="'+p.n+' pictures" tabindex="0"><div class="pc-vp"><div class="pc-tr">'+slides+'</div></div><button type="button" class="pc-b pc-p" aria-label="Previous picture">&#8249;</button><button type="button" class="pc-b pc-n" aria-label="Next picture">&#8250;</button><div class="pc-d"></div></div>'
++'<div class="p-6"><h3 class="m-0 mb-1 text-2xl font-bold">'+p.n+'</h3><p class="text-mute m-0 mb-3">'+p.sum+'</p><div class="flex flex-wrap gap-2 mb-6">'+p.stack.map(c=>'<span class="chip">'+c+'</span>').join('')+'</div>'
++'<div class="grid md:grid-cols-2 gap-6">'+sec('The problem','<p class="m-0 text-mute text-sm">'+p.problem+'</p>')+sec('Architecture &amp; tech stack',ul(p.arch))+sec('My individual contributions',ul(p.contrib))+sec('Results &amp; testing outcomes',res)+'</div>'
++'<div class="flex flex-wrap gap-3 mt-6"><a class="btn !px-4 !py-2 !text-sm" href="'+p.links.repo+'" target="_blank" rel="noopener">View repository ↗</a>'+(p.links.demo?'<a class="btn-o !px-4 !py-2 !text-sm" href="'+p.links.demo+'" target="_blank" rel="noopener">Live demo ↗</a>':'')+'</div></div></article>'}).join('');
+/* Project carousels: auto-advance every 2s, loop forever, go back with arrows / dots / swipe (pauses while a video plays) */
+const AUTO_MS=2000,reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('[data-pc]').forEach(root=>{
+const vp=root.querySelector('.pc-vp'),tr=root.querySelector('.pc-tr'),dotsBox=root.querySelector('.pc-d'),real=[...tr.children],n=real.length;
+if(n<2){root.querySelectorAll('.pc-b').forEach(b=>b.hidden=true);return}
+const a=real[n-1].cloneNode(true),b=real[0].cloneNode(true);a.setAttribute('aria-hidden','true');b.setAttribute('aria-hidden','true');
+tr.insertBefore(a,real[0]);tr.appendChild(b);
+let idx=1,busy=false,hold=false,vid=false,last=performance.now();
+root.addEventListener('play',()=>vid=true,true);root.addEventListener('pause',()=>{vid=false;last=performance.now()},true);root.addEventListener('ended',()=>{vid=false;last=performance.now()},true);
+const dots=real.map((_,k)=>{const d=document.createElement('button');d.type='button';d.setAttribute('aria-label','Show picture '+(k+1));d.onclick=()=>goTo(k+1);dotsBox.appendChild(d);return d});
+const setX=(px)=>{tr.style.transform='translateX(calc('+(-idx*100)+'% + '+(px||0)+'px))'};
+const paint=()=>{const r=((idx-1)%n+n)%n;dots.forEach((d,k)=>k===r?d.setAttribute('aria-current','true'):d.removeAttribute('aria-current'))};
+const settle=()=>{busy=false;if(idx===0)idx=n;else if(idx===n+1)idx=1;else return;tr.classList.add('na');setX(0);void tr.offsetWidth;tr.classList.remove('na')};
+function goTo(i){if(busy||i===idx)return;busy=true;idx=i;last=performance.now();setX(0);paint();if(reduceMotion)settle()}
+const go=d=>goTo(idx+d);
+tr.addEventListener('transitionend',e=>{if(e.target===tr)settle()});
+root.querySelector('.pc-p').onclick=()=>go(-1);root.querySelector('.pc-n').onclick=()=>go(1);
+root.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();go(-1)}if(e.key==='ArrowRight'){e.preventDefault();go(1)}});
+root.addEventListener('mouseenter',()=>hold=true);root.addEventListener('mouseleave',()=>{hold=false;last=performance.now()});
+root.addEventListener('focusin',()=>hold=true);root.addEventListener('focusout',()=>{hold=false;last=performance.now()});
+let sx=0,dx=0,down=false;
+vp.addEventListener('pointerdown',e=>{if(busy||(e.pointerType==='mouse'&&e.button!==0))return;down=true;sx=e.clientX;dx=0});
+vp.addEventListener('pointermove',e=>{if(!down)return;dx=e.clientX-sx;if(Math.abs(dx)>5){if(!vp.classList.contains('drag')){vp.classList.add('drag');tr.classList.add('na');vp.setPointerCapture(e.pointerId)}setX(dx)}});
+const end=()=>{if(!down)return;down=false;const was=vp.classList.contains('drag');vp.classList.remove('drag');tr.classList.remove('na');if(!was)return;void tr.offsetWidth;last=performance.now();if(Math.abs(dx)>vp.offsetWidth*.15){busy=false;go(dx<0?1:-1)}else setX(0)};
+vp.addEventListener('pointerup',end);vp.addEventListener('pointercancel',end);vp.addEventListener('dragstart',e=>e.preventDefault());
+/* timer: only counts while the Projects tab is showing and the picture is not being held */
+if(!reduceMotion)setInterval(()=>{const now=performance.now();if(root.offsetParent===null||document.hidden||hold||vid||down||busy){last=now;return}if(now-last>=AUTO_MS)go(1)},200);
+setX(0);paint()});
+
+const awards={c:[
+{n:'CSS NC II — TESDA',y:'2024',img:'assets/images/certificates/NCII.jpg',d:'National Certificate II in Computer Systems Servicing from TESDA, covering hardware and software installation, basic networking and troubleshooting.'},
+{n:'Regional Science and Technology Week 2025',y:'',img:'assets/images/certificates/Innovents_participation.jpg',d:'Participated in RSTW 2025 and learn in exhibits'},
+{n:'Intro to Interviewing in Grasshopper app',y:'',img:'assets/images/certificates/Grasshopper_Completion.jpg',d:'Completed the course about interviewing and everything about javascript programming language'},
+{n:'Math Quizbowl',y:'',img:'assets/images/certificates/Math_QuizBowl.jpg',d:'Participated in Math Quizbowl in FCUSR 2025'},
+{n:'Self Awareness in this Digital Age of Ai',y:'',img:'assets/images/certificates/Age_of_ai.jpg',d:'World Mental Health Awarenes Month 2026.'},
+{n:'Adolescent Reproductive Health',y:'',img:'assets/images/certificates/Adolescent_health.jpg',d:'World Mental Health Awarenes Month 2026.'},
+
+],
+a:[
+{n:'Completed DepEd Work Immersion',y:'Mar – Apr 2024',img:'assets/images/others/Work_immersion.jpg',d:'Finished on-the-job training at DepEd, practicing hardware assembly, networking troubleshooting and IP address configuration.'},
+{n:'Built an Online Shoe Shopping Website',y:'May – Jun 2025',img:'assets/images/others/shoe_site.jpg',d:'Designed and developed a responsive e-commerce web system with Django, Tailwind CSS and JavaScript.'}]};
+const pic={c:'<path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h5"/>',a:'<path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H4v1a4 4 0 0 0 4 4M16 6h4v1a4 4 0 0 1-4 4M12 13v4M8 21h8M10 17h4"/>'};
+const icon=(t,big,hide)=>'<svg class="'+(hide?'hidden ':'')+(big?'w-24 h-24':'w-12 h-12')+' stroke-brand fill-none stroke-[1.6]" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">'+pic[t]+'</svg>';
+const thumb=(x,t,big)=>!x.img?icon(t,big):big?'<img src="'+x.img+'" alt="'+x.n+'" class="w-full h-full object-contain max-h-[70vh]" onerror="this.nextElementSibling.classList.remove(\'hidden\');this.remove()">'+icon(t,big,true):icon(t,big)+'<img src="'+x.img+'" alt="'+x.n+'" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">';
+function drawAwards(){['c','a'].forEach(t=>{document.getElementById('grid-'+t).innerHTML=awards[t].map((x,i)=>'<button data-t="'+t+'" data-i="'+i+'" class="glass text-left overflow-hidden cursor-pointer text-tx transition hover:-translate-y-1 hover:border-brand hover:shadow-[0_0_30px_var(--glow)]"><div class="relative aspect-[4/3] grid place-items-center bg-gradient-to-br from-glow to-transparent border-b border-bd overflow-hidden">'+thumb(x,t)+'</div><div class="p-4"><h4 class="m-0 mb-1 font-semibold text-[.95rem]">'+x.n+'</h4><span class="font-mono text-brand text-xs">'+(x.y||'—')+'</span></div></button>').join('')})}
+drawAwards();
+const md=document.getElementById('modal');let cur=null;
+function openAward(t,i){cur=[t,i];const x=awards[t][i];document.getElementById('mimg').innerHTML=thumb(x,t,true);document.getElementById('mt').textContent=t==='c'?'Certificate':'Achievement';document.getElementById('mn').textContent=x.n;document.getElementById('my').textContent=x.y;document.getElementById('md').textContent=x.d;md.classList.add('!flex')}
+const closeAward=()=>md.classList.remove('!flex');
+['grid-c','grid-a'].forEach(id=>document.getElementById(id).onclick=e=>{const b=e.target.closest('button[data-t]');if(b)openAward(b.dataset.t,+b.dataset.i)});
+md.onclick=e=>{if(e.target===md)closeAward()};document.getElementById('mx').onclick=closeAward;
+addEventListener('keydown',e=>{if(e.key==='Escape')closeAward()});
+document.getElementById('mf').onchange=e=>{const f=e.target.files[0];if(!f||!cur)return;const r=new FileReader();r.onload=()=>{awards[cur[0]][cur[1]].img=r.result;drawAwards();openAward(cur[0],cur[1])};r.readAsDataURL(f)};
+const views=['home','portfolio','projects','certificates','documents','contacts'];
+function route(){let h=location.hash.slice(1);if(!views.includes(h))h='home';
+views.forEach(v=>document.getElementById(v).classList.toggle('!block',v===h));
+document.querySelectorAll('nav .nav-l').forEach(a=>{const on=a.dataset.v===h;a.classList.toggle('text-brand',on);a.classList.toggle('bg-glow',on)});window.scrollTo(0,0)}
+addEventListener('hashchange',route);route();
+document.getElementById('theme').onclick=()=>{const d=document.documentElement.classList.toggle('dark');try{localStorage.setItem('theme',d?'dark':'light')}catch(e){}};
+document.querySelectorAll('.doc-tab').forEach(t=>t.onclick=()=>document.querySelectorAll('.doc-tab').forEach(o=>{const on=o===t;o.setAttribute('aria-selected',on);document.getElementById('d-'+o.dataset.d).classList.toggle('hidden',!on)}));
+document.getElementById('send').onclick=()=>{const n=document.getElementById('fn').value.trim(),e=document.getElementById('fe').value.trim(),m=document.getElementById('fm').value.trim(),st=document.getElementById('fs');
+if(!n||!m||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){st.textContent='Please fill in your name, a valid email and a message.';st.className='text-sm mt-3 mb-0 text-red-500 min-h-[1.4em]';return}
+st.textContent='Opening your email app…';st.className='text-sm mt-3 mb-0 text-brand min-h-[1.4em]';
+location.href='mailto:ezrealsogello49@gmail.com?subject='+encodeURIComponent('Portfolio message from '+n)+'&body='+encodeURIComponent(m+'\n\n'+n+' ('+e+')')};
+/* Résumé buttons: always save the PDF to Downloads instead of opening it in a tab */
+const saveFile=(href,name)=>{const l=document.createElement('a');l.href=href;l.download=name;l.style.display='none';document.body.append(l);l.click();l.remove()};
+document.querySelectorAll('[data-dl]').forEach(a=>a.addEventListener('click',async e=>{
+if(location.protocol==='file:')return;
+e.preventDefault();const name=a.getAttribute('download');
+try{const r=await fetch(a.href);if(!r.ok)throw 0;const u=URL.createObjectURL(await r.blob());saveFile(u,name);setTimeout(()=>URL.revokeObjectURL(u),1000)}
+catch(_){saveFile(a.href,name)}}));
+</script>
+</body>
+</html>
