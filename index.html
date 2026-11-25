@@ -164,21 +164,22 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 <section class="view pt-10" id="documents">
 <h2 class="text-[1.7rem] font-bold mb-1"><small class="eyebrow">// documents</small>Documentation samples</h2>
-<p class="sub">Technical writing from my course: my résumé, a cover letter and a developer guide / SOP.</p>
+<p class="sub">Technical writing from my course: my résumé, a cover letter, a developer guide and a Windows 11 / networking SOP.</p>
 <div class="flex flex-wrap gap-2 mb-5" role="tablist" aria-label="Document samples">
 <button class="doc-tab nav-l border border-bd cursor-pointer" role="tab" id="t-res" aria-controls="d-res" aria-selected="true" data-d="res">Résumé</button>
 <button class="doc-tab nav-l border border-bd cursor-pointer" role="tab" id="t-cov" aria-controls="d-cov" aria-selected="false" data-d="cov">Cover letter</button>
 <button class="doc-tab nav-l border border-bd cursor-pointer" role="tab" id="t-dev" aria-controls="d-dev" aria-selected="false" data-d="dev">Developer guide (SOP)</button>
+<button class="doc-tab nav-l border border-bd cursor-pointer" role="tab" id="t-sop" aria-controls="d-sop" aria-selected="false" data-d="sop">SOP: Windows 11 &amp; networking</button>
 </div>
 
 <div id="d-res" role="tabpanel" aria-labelledby="t-res" class="card">
 <div class="flex flex-wrap items-center justify-between gap-3 mb-4"><h3 class="ct !mb-0">Résumé</h3><a class="btn !px-4 !py-2 !text-sm" href="assets/documents/Sogello_ATS_Resume.pdf" download="Sogello_ATS_Resume.pdf" data-dl>⬇ Download PDF</a></div>
-<object data="assets/documents/Sogello_ATS_Resume.pdl#view=FitH" type="application/pdf" class="w-full h-[75vh] rounded-xl border border-bd bg-bg">
+<object data="assets/documents/Sogello_ATS_Resume.pdf#view=FitH" type="application/pdf" class="w-full h-[75vh] rounded-xl border border-bd bg-bg">
 <p class="p-6 text-mute">Your browser can’t show the PDF here. <a class="text-brand underline" href="assets/documents/Sogello_ATS_Resume.pdf" target="_blank" rel="noopener">Open the résumé in a new tab</a>.</p>
 </object></div>
 
 <div id="d-cov" role="tabpanel" aria-labelledby="t-cov" class="card hidden">
-<h3 class="ct">Cover letter</h3>
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4"><h3 class="ct !mb-0">Cover letter</h3><a class="btn !px-4 !py-2 !text-sm" href="assets/documents/Sogello_Cover_Letter.docx" download="Sogello_Cover_Letter.docx" data-dl>⬇ Download Word (.docx)</a></div>
 <div class="max-w-[720px] space-y-3 text-[.95rem]">
 <p class="m-0 text-mute">John Israel Sogello · Pres. Roxas, Capiz · ezrealsogello49@gmail.com · 0991 538 9065</p>
 <p class="m-0">Dear Hiring Manager,</p>
@@ -189,7 +190,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 </div></div>
 
 <div id="d-dev" role="tabpanel" aria-labelledby="t-dev" class="card hidden">
-<h3 class="ct">Developer guide / SOP</h3>
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4"><h3 class="ct !mb-0">Developer guide / SOP</h3><a class="btn !px-4 !py-2 !text-sm" href="assets/documents/Sogello_Developer_Guide.docx" download="Sogello_Developer_Guide.docx" data-dl>⬇ Download full guide (.docx)</a></div>
+<p class="text-mute text-sm max-w-[760px] mt-0 mb-5">The full Word guide covers why I chose these languages and frameworks, how I learned them (YouTube, Programiz, W3Schools), tips for using AI effectively, and how to clone and run all three of my repositories. The procedure below is the shoe shop section.</p>
 <div class="max-w-[760px] text-[.95rem]">
 <h4 class="text-xl font-bold m-0">Running the Online Shoe Shopping Website locally</h4>
 <p class="font-mono text-brand text-xs mt-1 mb-4">Document type: Developer guide (SOP) · Version 1.0 · Author: John Israel Sogello</p>
@@ -216,6 +218,51 @@ python manage.py createsuperuser</div></li>
 <tr><td class="p-2 border-b border-bd">OperationalError: could not connect to server</td><td class="p-2 border-b border-bd">PostgreSQL stopped or wrong credentials</td><td class="p-2 border-b border-bd">Start the PostgreSQL service and recheck step 4</td></tr>
 <tr><td class="p-2">Port 8000 is already in use</td><td class="p-2">Another program uses the port</td><td class="p-2">Run <code class="font-mono">python manage.py runserver 8001</code></td></tr>
 </tbody></table></div>
+</div></div>
+
+<div id="d-sop" role="tabpanel" aria-labelledby="t-sop" class="card hidden">
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4"><h3 class="ct !mb-0">SOP: Windows 11, Ethernet cable and printer sharing</h3><a class="btn !px-4 !py-2 !text-sm" href="assets/documents/Sogello_SOP.pdf" download="Sogello_SOP.pdf" data-dl>⬇ Download full SOP (.docx)</a></div>
+<div class="max-w-[760px] text-[.95rem]">
+<h4 class="text-xl font-bold m-0">Installing Windows 11, making a LAN cable and sharing a printer</h4>
+<p class="font-mono text-brand text-xs mt-1 mb-4">Document type: SOP · Version 1.0 · Author: John Israel Sogello</p>
+<p class="m-0 mb-1"><b>Purpose.</b> Three everyday technician tasks: install Windows 11 from a USB made with Rufus, make a UTP Ethernet cable, and connect two computers so both can print on one shared printer. The Word file has the full steps and a troubleshooting table.</p>
+
+<p class="m-0 mt-5 mb-2"><b>Part A. Install Windows 11 with Rufus</b></p>
+<p class="m-0 mb-1 text-mute text-sm">You need an 8 GB or larger USB drive (it will be erased) and a PC with TPM 2.0 and Secure Boot, or use Rufus&rsquo;s requirement-removal option.</p>
+<ol class="pl-5 list-decimal space-y-1.5 m-0">
+<li>Download Rufus from <code class="font-mono text-brand">rufus.ie</code> and open it with the USB plugged in.</li>
+<li>Click the arrow beside SELECT, choose <b>DOWNLOAD</b>, then pick Windows 11, the release, edition, language and x64.</li>
+<li>Set Partition scheme to <b>GPT</b> and Target system to <b>UEFI</b>, then click START and confirm. Wait for READY.</li>
+<li>On the target PC, press the boot menu key (F12, F2, F10, Esc or Del) and choose the USB drive.</li>
+<li>Click Install now, choose Custom: Install Windows only, select the drive, and click Next.</li>
+<li>Remove the USB when the PC restarts, finish first-time setup, then run Windows Update and install drivers.</li>
+</ol>
+
+<p class="m-0 mt-5 mb-2"><b>Part B. Make an Ethernet cable</b></p>
+<div class="overflow-x-auto"><table class="w-full text-sm border-collapse mb-3">
+<thead><tr class="text-left text-brand font-mono"><th class="p-2 border-b border-bd">Tool</th><th class="p-2 border-b border-bd">Purpose</th></tr></thead>
+<tbody class="text-mute">
+<tr><td class="p-2 border-b border-bd">Internet cable (UTP)</td><td class="p-2 border-b border-bd">The cable with 4 twisted pairs</td></tr><tr><td class="p-2 border-b border-bd">RJ45 connectors</td><td class="p-2 border-b border-bd">Plugs for both ends</td></tr><tr><td class="p-2 border-b border-bd">Scissors</td><td class="p-2 border-b border-bd">Cut to length, trim wire tips</td></tr><tr><td class="p-2 border-b border-bd">Cable stripper</td><td class="p-2 border-b border-bd">Removes the outer jacket safely</td></tr><tr><td class="p-2 border-b border-bd">Crimping tool</td><td class="p-2 border-b border-bd">Presses the connector onto the wires</td></tr><tr><td class="p-2 border-b border-bd">LAN tester</td><td class="p-2 border-b border-bd">Checks all 8 wires</td></tr>
+</tbody></table></div>
+<p class="m-0 mb-1 text-mute text-sm">Wire order (T568B, both ends for a straight-through cable): <b class="text-tx">1</b> white-orange, <b class="text-tx">2</b> orange, <b class="text-tx">3</b> white-green, <b class="text-tx">4</b> blue, <b class="text-tx">5</b> white-blue, <b class="text-tx">6</b> green, <b class="text-tx">7</b> white-brown, <b class="text-tx">8</b> brown.</p>
+<ol class="pl-5 list-decimal space-y-1.5 m-0">
+<li>Cut the cable and strip about 2.5 cm of the outer jacket.</li>
+<li>Untwist the pairs, straighten the wires and arrange them in the color order above.</li>
+<li>Trim the tips flat, leaving about 1.2 cm exposed.</li>
+<li>Slide the wires into the RJ45 connector (clip facing down) until they touch the end, then crimp.</li>
+<li>Repeat on the other end, then test with the LAN tester. Lights 1 to 8 should flash in order on both units.</li>
+</ol>
+
+<p class="m-0 mt-5 mb-2"><b>Part C. Connect two computers and share a printer</b></p>
+<ol class="pl-5 list-decimal space-y-1.5 m-0">
+<li>Plug the Ethernet cable into the LAN port of both computers.</li>
+<li>Set manual IPv4 addresses: PC1 <code class="font-mono text-brand">192.168.1.10</code> and PC2 <code class="font-mono text-brand">192.168.1.11</code>, subnet mask <code class="font-mono text-brand">255.255.255.0</code>.</li>
+<li>Set both networks to Private and turn on Network discovery and File and printer sharing.</li>
+<li>Test from PC2 with <code class="font-mono text-brand">ping 192.168.1.10</code>.</li>
+<li>Connect the printer to PC1, install its driver, then open Printer properties &gt; Sharing and tick <b>Share this printer</b>.</li>
+<li>On PC2, choose Add device &gt; The printer that I want isn&rsquo;t listed &gt; Select a shared printer by name, and enter <code class="font-mono text-brand">\\192.168.1.10\OfficePrinter</code>.</li>
+<li>For automatic printing, set the shared printer as default on both PCs and set the Print Spooler service to Automatic. Keep PC1 and the printer on.</li>
+</ol>
 </div></div>
 </section>
 
@@ -359,6 +406,10 @@ const awards={c:[
 {n:'Math Quizbowl',y:'',img:'assets/images/certificates/Math_QuizBowl.jpg',d:'Participated in Math Quizbowl in FCUSR 2025'},
 {n:'Self Awareness in this Digital Age of Ai',y:'',img:'assets/images/certificates/Age_of_ai.jpg',d:'World Mental Health Awarenes Month 2026.'},
 {n:'Adolescent Reproductive Health',y:'',img:'assets/images/certificates/Adolescent_health.jpg',d:'World Mental Health Awarenes Month 2026.'},
+{n:'English for IT1',y:'',img:'assets/images/certificates/it1.jpg',d:'Completing the course in Cisco Networking Company.'},
+{n:'English for IT2',y:'',img:'assets/images/certificates/it2.jpg',d:'Completing the course in Cisco Networking Company.'},
+{n:'Create Compelling Reports',y:'',img:'assets/images/certificates/reports.jpg',d:'Completing the course in Cisco Networking Company.'},
+{n:'Volunteering for Water: Shaping a National Volunteering Work in the Water Sector - Visayas Sector',y:'',img:'assets/images/certificates/water.jpg',d:'Participated in the Volunteer for water in visayas sector.'},
 
 ],
 a:[
